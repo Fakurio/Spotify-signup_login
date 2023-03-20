@@ -1,0 +1,47 @@
+.birth-input {
+  margin-top: 32px;
+
+  & p {
+    font-weight: 700;
+  }
+
+  & &__fields {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 16px;
+    gap: 12px;
+
+    &__month-picker {
+      width: 90%;
+    }
+
+    & label {
+      font-weight: 400;
+    }
+
+    & input {
+      width: 100%;
+      -moz-appearance: textfield;
+    }
+
+    & input::-webkit-outer-spin-button,
+    & input::-webkit-inner-spin-button {
+      -webkit-appearance: none;
+    }
+
+    & .error-field {
+      margin-top: 8px;
+    }
+  }
+}
+
+@media (min-width: 600px) {
+  .birth-input {
+    & &__fields {
+      &__month-picker {
+        width: 60%;
+      }
+    }
+  }
+}

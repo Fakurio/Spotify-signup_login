@@ -1,0 +1,34 @@
+.signup-form {
+  margin-top: 32px;
+  text-align: left;
+
+  & &__text-inputs {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  & p {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: var(--font-text);
+  }
+
+  & .error-field {
+    color: var(--color-error);
+    font-size: var(--font-text);
+    font-weight: 400;
+    margin-top: -25px;
+    display: flex;
+    gap: 8px;
+  }
+
+  & &__signup-error {
+    margin-top: 32px;
+    color: var(--color-error);
+    border: 1px solid var(--color-error);
+    padding: 10px;
+    border-radius: var(--border-radius);
+    text-align: center;
+  }
+}

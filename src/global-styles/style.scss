@@ -1,0 +1,17 @@
+/// Main Styles File
+/// Here we import all the global Styles files we need for our project.
+
+@import "styles/normalize.scss";
+@import "styles/root.scss";
+@import "styles/fonts.scss";
+
+body {
+  font-family: "Lato", sans-serif;
+  color: var(--color-text-primary);
+  font-weight: 700;
+  padding: 50px 16px;
+}
+
+a {
+  text-decoration: none;
+}

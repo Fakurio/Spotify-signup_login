@@ -1,0 +1,48 @@
+.gender-input {
+  margin-top: 32px;
+
+  & .error-field {
+    margin-top: 10px;
+  }
+
+  & p {
+    font-weight: 700;
+  }
+
+  & &__options {
+    margin-top: 16px;
+    display: flex;
+    flex-flow: wrap;
+    gap: 15px 0;
+
+    & .option {
+      display: flex;
+      align-items: center;
+      font-size: var(--font-text);
+      font-weight: 400;
+
+      & label {
+        margin-left: 18px;
+        margin-right: 24px;
+        cursor: pointer;
+      }
+
+      & input {
+        appearance: none;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 1px solid var(--color-border);
+        cursor: pointer;
+      }
+
+      & input:hover {
+        border-color: var(--color-primary);
+      }
+
+      & input:checked {
+        border: 5px solid var(--color-primary);
+      }
+    }
+  }
+}

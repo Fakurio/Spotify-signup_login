@@ -1,0 +1,60 @@
+.month-picker {
+  display: flex;
+  height: 90px;
+  flex-direction: column;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+
+  & label {
+    font-weight: 400;
+    font-size: var(--font-text);
+    cursor: pointer;
+  }
+
+  & .select {
+    padding: 20px 24px;
+    border: 1px solid var(--color-border);
+    border-radius: var(--border-radius);
+    color: var(--color-text-secondary);
+    font-size: var(--font-text);
+    font-weight: 400;
+    position: relative;
+    cursor: pointer;
+
+    &::after {
+      content: url("@/assets/images/arrow.svg");
+      color: var(--color-text-secondary);
+      position: absolute;
+      right: 25px;
+      top: 19px;
+      pointer-events: none;
+    }
+  }
+
+  & .options {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-white);
+    border-radius: 17px;
+    border: 1px solid var(--color-border);
+    padding: 16px 12px;
+    z-index: 10;
+    top: 95px;
+
+    & .option {
+      color: var(--color-text-primary);
+      font-weight: 400;
+      font-size: var(--font-text);
+      padding: 8px 12px;
+      border-radius: 8px;
+    }
+
+    & .option:hover {
+      background-color: #f0f0f0;
+      cursor: pointer;
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.dashboard-container {
+  max-width: 343px;
+  text-align: center;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  & &__greetings {
+    font-size: var(--font-h1);
+  }
+
+  & .user-email {
+    margin-top: 16px;
+    font-size: var(--font-h2);
+  }
+
+  & .button {
+    margin-top: 16px;
+  }
+}
