@@ -26,7 +26,9 @@ export const DashboardPage: React.FC = () => {
 
   return (
     <div className="dashboard-container">
-      <h1 className="dashboard-container__greetings">Dzień Dobry</h1>
+      <h1 className="dashboard-container__greetings">
+        Dzień Dobry {currentUser?.displayName}
+      </h1>
       <h2 className="user-email">{currentUser?.email}</h2>
       <Button
         text="Log Out"

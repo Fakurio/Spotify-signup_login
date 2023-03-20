@@ -12,7 +12,8 @@ export const LoginForm: React.FC = () => {
     email: "",
     password: "",
   });
-  const { login } = useAuth();
+  const [rememberMe, setRememberMe] = useState<boolean>(true);
+  const { login, setSessionPersistence } = useAuth();
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [loginError, setLoginError] = useState<string>("");
   const navigation = useNavigate();
@@ -26,6 +27,9 @@ export const LoginForm: React.FC = () => {
     try {
       setIsLoading(true);
       setLoginError("");
+      rememberMe
+        ? await setSessionPersistence(true)
+        : await setSessionPersistence(false);
       await login(fields["email"], fields["password"]);
       navigation("/");
     } catch (err: unknown) {
@@ -66,7 +70,12 @@ export const LoginForm: React.FC = () => {
       <p className="password-remainder">Do not you remember the password?</p>
       <div className="login-form__summary">
         <div className="summary__checkbox">
-          <input type="checkbox" id="remember" />
+          <input
+            type="checkbox"
+            id="remember"
+            checked={rememberMe}
+            onChange={() => setRememberMe(!rememberMe)}
+          />
           <label htmlFor="remember">Remember me</label>
         </div>
         <Button

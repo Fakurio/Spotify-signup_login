@@ -185,7 +185,11 @@ export const SignupForm: React.FC = () => {
       try {
         setSignupError("");
         setIsLoading(true);
-        await signup(fields["email"], fields["password"]);
+        await signup(
+          fields["email"],
+          fields["password"],
+          fields["profile_name"]
+        );
         navigation("/login");
       } catch (err: unknown) {
         if (err instanceof FirebaseError) {
